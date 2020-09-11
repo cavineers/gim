@@ -1,4 +1,4 @@
-# gim
+# GIM
 Gears in Motion Project Website From 4541 Cavineers
 
 # About the Creators
