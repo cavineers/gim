@@ -37,6 +37,7 @@ body {
     left: 0;
     right: 0;
     height: 100vh;
+    overflow: auto;
 }
 
 .block2 {
