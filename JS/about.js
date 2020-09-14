@@ -1,3 +1,5 @@
+console.warn('%cDO NOT PASTE ANYTHING HERE! Doing so can cause hackers to get access to your account and data! ', 'background: #222; color: #bada55; font-size: 20px;')
+
 $(document).ready(function() {
     // Get the container position
     var containerPos = $('#container').offset();
