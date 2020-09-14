@@ -62,7 +62,9 @@ body {
         background: rgb(0, 140, 255);
         /* background: linear-gradient(to bottom left, transparent 83.5%, rgb(21, 65, 211) 16.5%), linear-gradient(to bottom right, rgb(235, 202, 17), rgba(235, 177, 17, 0.925) 50%, rgba(0, 174, 255, 0.938), rgb(0, 140, 255) 50%); */
         /* background: linear-gradient(to bottom left, transparent 82%, rgb(21, 65, 211) 18%), linear-gradient(to bottom right, rgb(124, 207, 245), rgb(110, 209, 255) 50%, rgba(0, 140, 255, 0.938), rgba(0, 132, 255, 0.938) 50%); */
-        background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%);
+        /* background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%); */
+        background: linear-gradient(to bottom left, transparent 82%, rgb(167, 167, 167) 18%), linear-gradient(to bottom right, rgb(26, 26, 26) 50%, rgb(255, 0, 0) 50%);
+        color: white;
         background-repeat: no-repeat;
         position: fixed;
         width: 86%;
@@ -76,7 +78,8 @@ body {
         background: rgb(0, 140, 255);
         /* background: linear-gradient(to bottom left, transparent 83.5%, rgb(21, 65, 211) 16.5%), linear-gradient(to bottom right, rgb(235, 202, 17), rgba(235, 177, 17, 0.925) 50%, rgba(0, 174, 255, 0.938), rgb(0, 140, 255) 50%); */
         /* background: linear-gradient(to bottom left, transparent 82%, rgb(21, 65, 211) 18%), linear-gradient(to bottom right, rgb(124, 207, 245), rgb(110, 209, 255) 50%, rgba(0, 140, 255, 0.938), rgba(0, 132, 255, 0.938) 50%); */
-        background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%);
+        /* background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%); */
+        background: linear-gradient(to bottom left, transparent 82%, rgb(167, 167, 167) 18%), linear-gradient(to bottom right, rgb(26, 26, 26) 50%, rgb(255, 0, 0) 50%);
         background-repeat: no-repeat;
         position: fixed;
         width: 86%;
@@ -131,7 +134,8 @@ body {
         background: rgb(0, 140, 255);
         /* background: linear-gradient(to bottom left, transparent 83.5%, rgb(21, 65, 211) 16.5%), linear-gradient(to bottom right, rgb(235, 202, 17), rgba(235, 177, 17, 0.925) 50%, rgba(0, 174, 255, 0.938), rgb(0, 140, 255) 50%); */
         /* background: linear-gradient(to bottom left, transparent 82%, rgb(21, 65, 211) 18%), linear-gradient(to bottom right, rgb(124, 207, 245), rgb(110, 209, 255) 50%, rgba(0, 140, 255, 0.938), rgba(0, 132, 255, 0.938) 50%); */
-        background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%);
+        /* background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%); */
+        background: linear-gradient(to bottom left, transparent 82%, rgb(167, 167, 167) 18%), linear-gradient(to bottom right, rgb(26, 26, 26) 50%, rgb(255, 0, 0) 50%);
         background-repeat: no-repeat;
         position: fixed;
         overflow: scroll;
@@ -149,7 +153,8 @@ body {
         background: rgb(0, 140, 255);
         /* background: linear-gradient(to bottom left, transparent 83.5%, rgb(21, 65, 211) 16.5%), linear-gradient(to bottom right, rgb(235, 202, 17), rgba(235, 177, 17, 0.925) 50%, rgba(0, 174, 255, 0.938), rgb(0, 140, 255) 50%); */
         /* background: linear-gradient(to bottom left, transparent 82%, rgb(21, 65, 211) 18%), linear-gradient(to bottom right, rgb(124, 207, 245), rgb(110, 209, 255) 50%, rgba(0, 140, 255, 0.938), rgba(0, 132, 255, 0.938) 50%); */
-        background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%);
+        /* background: linear-gradient(to bottom left, transparent 82%, rgb(255, 238, 0) 18%), linear-gradient(to bottom right, rgb(125, 255, 113) 50%, rgb(0, 140, 255) 50%); */
+        background: linear-gradient(to bottom left, transparent 82%, rgb(167, 167, 167) 18%), linear-gradient(to bottom right, rgb(26, 26, 26) 50%, rgb(255, 0, 0) 50%);
         background-repeat: no-repeat;
         position: fixed;
         overflow: scroll;
@@ -343,4 +348,34 @@ body {
 .clickLink {
     background: grey;
     opacity: 0.8;
+}
+
+.container {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 300px;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    -webkit-box-align: left;
+    -webkit-align-items: left;
+    -ms-flex-align: left;
+    align-items: left;
+    margin-left: 12px;
+}
+
+.machine {
+    width: 20vmin;
+    fill: #000000;
+}
+
+.small-shadow,
+.medium-shadow,
+.large-shadow {
+    fill: rgba(0, 0, 0, 0.05);
 }
