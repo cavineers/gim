@@ -119,7 +119,6 @@ function updateInstructions(index) {
     let contentSpan = document.getElementById('directions');
     switch (index) {
         case 1:
-            console.log('hi')
             contentSpan.innerHTML = "Hi, welcome to the first lesson in our Gears in Motion Program! We are really excited to be sharing our GIM program with you today. GIM stands for Gears In Motion and will teach us about gears and how to turn together like gears in a system.<br><br>In this first activity you will be learning the basics of GIM and you will learn how gears work together to form a robot!<br><br><b>Lets Start by clicking the next arrow on the slide show and this page will update automatically giving you more information!<b>";
             break;
         case 2:
@@ -140,55 +139,91 @@ function printMousePos(event) {
 document.addEventListener("click", printMousePos);
 
 // Puzzle Section
+let puzzle1Objs = 0;
+
+function checkIfDonePuzzle1() {
+    if (puzzle1Objs == 4) { //Update 4 with number of puzzle pieces
+        document.getElementById('completeMsg').style.display = 'block';
+    }
+}
+
+window.onclick = function(e) {
+    if (document.getElementById('completeMsg').style.display === 'block') {
+        document.getElementById('completeMsg').style.display = 'none';
+        window.location.reload();
+    } else {
+        document.getElementById('completeMsg').style.display = 'none';
+    }
+};
+
+function closeModal() {
+    document.getElementById('completeMsg').style.display = 'none';
+    window.location.reload();
+}
+
 $(".photo").draggable();
 $(".photo").draggable({ revert: "invalid" });
 
-$("target.se").droppable({
-    accept: "#se",
-    // drop: function(event, ui) {
-    //     $('#se').addClass('sehome');
-    // }
+$("target.arm1").droppable({
+    accept: "#arm1",
     drop: function(event, ui) {
         ui.draggable
             .css("left", "auto")
             .css("top", "auto")
-            .appendTo('.se');
-    }
-});
-$("target.sw").droppable({
-    accept: "#sw",
-    // drop: function(event, ui) {
-    //     $('#sw').addClass('swhome');
-    // }
-    drop: function(event, ui) {
-        ui.draggable
-            .css("left", "auto")
-            .css("top", "auto")
-            .appendTo('.sw');
-    }
-});
-$("target.nw").droppable({
-    accept: "#nw",
-    // drop: function(event, ui) {
-    //     $('#nw').addClass('nwhome');
-    // }
-    drop: function(event, ui) {
-        ui.draggable
-            .css("left", "auto")
-            .css("top", "auto")
-            .appendTo('.nw');
+            .css("width", "100%")
+            .css("height", "100%")
+            .css("background-repeat", "no-repeat")
+            .css("background-size", "100% 100%")
+            .appendTo('.arm1');
+        puzzle1Objs++;
+        checkIfDonePuzzle1();
     }
 });
 
-$("target.ne").droppable({
-    accept: "#ne",
-    // drop: function(event, ui) {
-    //     $('#ne').addClass('nehome');
-    // }
+$("target.arm2").droppable({
+    accept: "#arm2",
     drop: function(event, ui) {
         ui.draggable
             .css("left", "auto")
             .css("top", "auto")
-            .appendTo('.ne');
+            .css("width", "100%")
+            .css("height", "100%")
+            .css("background-repeat", "no-repeat")
+            .css("background-size", "100% 100%")
+            .appendTo('.arm2');
+        puzzle1Objs++;
+        checkIfDonePuzzle1();
+    }
+});
+
+$("target.head").droppable({
+    accept: "#head",
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .css("width", "100%")
+            .css("height", "100%")
+            .css("background-repeat", "no-repeat")
+            .css("background-size", "100% 100%")
+            .appendTo('.head');
+        puzzle1Objs++;
+        checkIfDonePuzzle1();
+    }
+});
+
+$("target.body").droppable({
+    accept: "#body",
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .css("width", "100%")
+            .css("height", "100%")
+            .css("background-repeat", "no-repeat")
+            .css("background-size", "100% 100%")
+            .appendTo('.body');
+        puzzle1Objs++;
+        checkIfDonePuzzle1();
     }
 });

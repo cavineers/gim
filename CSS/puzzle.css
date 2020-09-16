@@ -1,169 +1,18 @@
-/* * {
-    box-sizing: border-box;
-}
-
-#wrapper {
-    margin: 20px auto;
-    width: 483px;
-    background: lightgrey;
-    padding: 20px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-puzzlebox {
-    display: inline-block;
-    margin-left: 14px;
-    width: 200px;
-    height: 200px;
-}
-
-.photo {
-    width: 100px;
-    height: 100px;
-    float: left;
-}
-
-#nw,
-#ne,
-#se,
-#sw {
-    background-size: 100px 100px;
-}
-
-#sw {
-    background-image: url('../Img/test.jpg');
-}
-
-#se {
-    background-image: url('../Img/1.jpg');
-}
-
-#nw {
-    background-image: url('../Img/testing.png');
-}
-
-#ne {
-    background-image: url('../Img/download.png');
-}
-
-target.nw,
-target.sw,
-target.se,
-target.ne {
-    display: block;
-    float: left;
-    border: solid 1px white;
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-}
-
-.swhome,
-.sehome,
-.nwhome,
-.nehome {
-    transition: left 1s ease, top 1s ease;
-}
-
-.nehome {
-    left: 319px !important;
-    top: 0px !important;
-}
-
-.swhome {
-    top: 0px !important;
-    left: 219px !important;
-}
-
-.sehome {
-    top: 100px !important;
-    left: 219px !important;
-}
-
-.nwhome {
-    top: -100px !important;
-    left: 119px !important;
-} ^^^ ORIGINAL ^^^*/
-
 * {
     box-sizing: border-box;
 }
 
-#wrapper {
-    width: 70%;
-    background: white;
-    padding: 20px;
-    border-bottom-right-radius: 10px;
-}
 
-puzzlebox {
+/* puzzlebox {
     display: inline-block;
     margin-left: 14px;
     width: 100%;
-}
+} */
 
 .photo {
     width: 100px;
     height: 100px;
     float: left;
-}
-
-#nw,
-#ne,
-#se,
-#sw {
-    background-size: 100px 100px;
-}
-
-#sw {
-    background-image: url('../Img/test.jpg');
-    cursor: pointer;
-}
-
-#se {
-    background-image: url('../Img/1.jpg');
-    cursor: pointer;
-}
-
-#nw {
-    background-image: url('../Img/testing.png');
-    cursor: pointer;
-}
-
-#ne {
-    background-image: url('../Img/download.png');
-    cursor: pointer;
-}
-
-target.nw,
-target.sw,
-target.se,
-target.ne {
-    display: block;
-    float: left;
-    border: solid 2px rgb(0, 0, 0);
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-}
-
-.puzzlePieces {
-    background: rgb(255, 255, 255);
-    width: 30%;
-    padding: 20px;
-    border-bottom-left-radius: 10px;
-    border-right: 4px dashed grey;
-}
-
-.contentPuz {
-    grid-column: 1;
-    grid-row: 3 / span 4;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    width: 80%;
-    height: 100%;
 }
 
 .overlayContainer {
@@ -172,15 +21,209 @@ target.ne {
     grid-template-rows: auto auto auto auto;
 }
 
-.headSection {
-    grid-column: 1;
-    grid-row: 1;
-    background: rgb(255, 255, 255);
-    width: 80%;
-    padding: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+@media(min-width: 610px) {
+    .contentPuz {
+        grid-column: 1;
+        grid-row: 3 / span 4;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        width: 80%;
+        height: 100%;
+    }
+    #wrapper {
+        width: 70%;
+        background: white;
+        padding: 20px;
+        border-bottom-right-radius: 10px;
+    }
+    .puzzlePieces {
+        background: rgb(255, 255, 255);
+        width: 30%;
+        padding: 20px;
+        border-bottom-left-radius: 10px;
+        border-right: 4px dashed grey;
+    }
+    .headSection {
+        grid-column: 1;
+        grid-row: 1;
+        background: rgb(255, 255, 255);
+        width: 80%;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 4px dashed grey;
+    }
+}
+
+@media(max-width: 609px) {
+    .contentPuz {
+        grid-column: 1;
+        grid-row: 3 / span 4;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 100%;
+    }
+    #wrapper {
+        width: 100%;
+        background: white;
+        padding: 20px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        height: 100%;
+    }
+    .puzzlePieces {
+        background: rgb(255, 255, 255);
+        width: 100%;
+        padding: 20px;
+        border-bottom: 4px dashed grey;
+        height: 50%;
+    }
+    .headSection {
+        grid-column: 1;
+        grid-row: 1;
+        background: rgb(255, 255, 255);
+        width: 90%;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 4px dashed grey;
+    }
+}
+
+
+/* Puzzle Box Alignments */
+
+target.head {
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 4px dashed grey;
+    height: 100px;
+    width: 20%;
+}
+
+target.body {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 250px;
+    width: 55%;
+}
+
+target.arm1 {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 20%;
+}
+
+target.arm2 {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 20%;
+}
+
+#head,
+#body,
+#arm1,
+#arm2 {
+    background-size: 100px 100px;
+}
+
+#arm2 {
+    background-image: url('../Img/test.jpg');
+    cursor: pointer;
+}
+
+#arm1 {
+    background-image: url('../Img/1.jpg');
+    cursor: pointer;
+}
+
+#head {
+    background-image: url('../Img/download.png');
+    cursor: pointer;
+}
+
+#body {
+    background-image: url('../Img/gimyyy.png');
+    cursor: pointer;
+}
+
+target.head,
+target.arm2,
+target.arm1,
+target.body {
+    display: block;
+    border: solid 2px rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+target.arm2,
+target.arm1,
+target.body {
+    float: left;
+}
+
+puzzlebox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bodySec {
+    margin-top: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+/* Modal Stuff */
+
+
+/* Modal Styling */
+
+.modal-all {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    font-size: 17px;
+    line-height: 1.9;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    padding-top: 168px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 10% auto;
+    width: 30%;
+    /* background: rgb(255, 255, 255); */
+    background: rgb(0, 255, 42);
+    color: black;
+    border: none;
+    border-radius: 4px;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
 }
