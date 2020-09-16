@@ -74,8 +74,14 @@ function openActivity1() {
     document.getElementById('activity1').style.display = 'block';
 }
 
+function openActivity2() {
+    document.getElementById('allCont').style.display = 'none';
+    document.getElementById('activity2').style.display = 'block';
+}
+
 function closeEverything() {
     document.getElementById('activity1').style.display = 'none';
+    document.getElementById('activity2').style.display = 'none';
     document.getElementById('allCont').style.display = 'block';
 }
 
@@ -132,3 +138,57 @@ function printMousePos(event) {
 }
 
 document.addEventListener("click", printMousePos);
+
+// Puzzle Section
+$(".photo").draggable();
+$(".photo").draggable({ revert: "invalid" });
+
+$("target.se").droppable({
+    accept: "#se",
+    // drop: function(event, ui) {
+    //     $('#se').addClass('sehome');
+    // }
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .appendTo('.se');
+    }
+});
+$("target.sw").droppable({
+    accept: "#sw",
+    // drop: function(event, ui) {
+    //     $('#sw').addClass('swhome');
+    // }
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .appendTo('.sw');
+    }
+});
+$("target.nw").droppable({
+    accept: "#nw",
+    // drop: function(event, ui) {
+    //     $('#nw').addClass('nwhome');
+    // }
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .appendTo('.nw');
+    }
+});
+
+$("target.ne").droppable({
+    accept: "#ne",
+    // drop: function(event, ui) {
+    //     $('#ne').addClass('nehome');
+    // }
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .appendTo('.ne');
+    }
+});

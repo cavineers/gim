@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/dash.css">
+    <link rel="stylesheet" href="./CSS/puzzle.css">
     <title>Gears In Motion: Dashboard</title>
 </head>
 
@@ -43,7 +44,7 @@
             <!-- Main Features -->
             <div class="infoBox1">
                 <div class="content">
-                    <p><span class="headTxt"><b>Get Started:</b></span><br><br><button onclick="openActivity1()" class="mainBtn">Activity 1</button>
+                    <p><span class="headTxt"><b>Get Started:</b></span><br><br><button onclick="openActivity1()" class="mainBtn">Activity 1</button><button onclick="openActivity2()" class="mainBtn">Activity 2</button>
                     </p>
                 </div>
                 <footer style="-webkit-align-items: center; -ms-flex-align: center; align-items: center; background: rgb(212, 212, 212); color: black; padding: 16px 0 20px; font-weight: 300; padding: 32px 20px 50px; border-radius: 12px;">
@@ -51,6 +52,7 @@
                 </footer>
             </div>
         </div>
+        <!-- Gear Animation -->
         <div class="container">
             <svg class="machine" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 645 526">
               <defs/>
@@ -124,6 +126,38 @@
             <br><br><br><br>
         </div>
     </div>
+    <div class="activity1" id="activity2">
+        <br><br><br><br><br><br>
+        <div class="mainDiv">
+            <h1 style="color: white;">Welcome to activity 2!</h1>
+        </div>
+        <div class="overlayContainer">
+            <div class="headSection">
+                <h2>It is time to build a GIM Friend!</h2>
+                <p>Drag the pieces in the left box to the proper spot in the right box. If the piece is placed correctly it will lock in place.</p>
+            </div>
+            <div class="contentPuz">
+                <div class="puzzlePieces">
+                    <puzzlebox>
+                        <div class="photo" id="ne"></div>
+                        <div class="photo" id="se"></div>
+                        <div class="photo" id="sw"></div>
+                        <div class="photo" id="nw"></div>
+                    </puzzlebox>
+                </div>
+                <section id="wrapper">
+                    <puzzlebox>
+                        <target class="nw"></target>
+                        <target class="ne"></target>
+                        <target class="sw"></target>
+                        <target class="se"></target>
+                    </puzzlebox>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./JS/main.js"></script>
 </body>
 
