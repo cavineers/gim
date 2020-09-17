@@ -127,6 +127,12 @@ function updateInstructions(index) {
         case 3:
             contentSpan.innerHTML = "What are gears?<br><br> Well, a gear is a wheel that has teeth that interlock together. Gears are typically used to move energy down a gear system, thus completing a certain task. A gear system is created when several gears are interlocked with one another.";
             break;
+        case 4:
+            contentSpan.innerHTML = "Gears turn together to complete all kinds of complex tasks!<br><br>Some examples of everyday items that use gears are bicycles, watches, locks, and so much more.<br><br><b>Think: How does this apply to all of us?</b><br>Be ready to answer on the next slide.";
+            break;
+        case 5:
+            contentSpan.innerHTML = "When you help someone, it makes them feel good! In turn that prompts them to want to help someone else. Similarly to gears, helping others is a chain reaction of people working together to achieve something great!<br><br><b>That is it! You have completed activity 1. Head to activity 2 where you will need to complete a puzzle to build your virtual GIM!</b>";
+            break;
     }
 }
 
