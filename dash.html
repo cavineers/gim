@@ -137,7 +137,22 @@
         <br><br><br><br><br><br>
         <div class="mainDiv">
             <h1 style="color: white;">Welcome to activity 2!</h1>
+            <div class="infoBox1">
+                <div class="content">
+                    <p><span class="headTxt"><b>Activity 2 Guide:</b></span><br><br> Welcome to activity 2! Here we will talk about what a GIM is and how to build it.<br>
+                        <ol>
+                            <li>Scroll down to see the puzzle below.</li>
+                            <li>Locate both the green arms and move them into the arm positions.</li>
+                            <li>Locate the pink center piece. This is a gear which will allow our give to move.</li>
+                            <li>Find the blue leg pieces and move them into the leg positions.</li>
+                            <li>Move the gear head into the head slot and then you will have built your first GIM!</li>
+                        </ol>
+                        <em>Notice how all the gear teeth would line up so it can move.</em>
+                    </p>
+                </div>
+            </div>
         </div>
+        <br>
         <div class="overlayContainer">
             <div class="headSection">
                 <h2>It is time to build a GIM Friend!</h2>
@@ -145,11 +160,14 @@
             </div>
             <div class="contentPuz">
                 <div class="puzzlePieces">
+                    <p style='display: none;' id="completedText">Great Job! See how the gear teeth align to fit each other.</p>
                     <puzzlebox>
                         <div class="photo" id="head"></div>
                         <div class="photo" id="body"></div>
                         <div class="photo" id="arm1"></div>
                         <div class="photo" id="arm2"></div>
+                        <div class="photo" id="leg1"></div>
+                        <div class="photo" id="leg2"></div>
                     </puzzlebox>
                 </div>
                 <section id="wrapper">
@@ -159,6 +177,11 @@
                             <target class="arm1"></target>
                             <target class="body"></target>
                             <target class="arm2"></target>
+                        </div>
+                        <br>
+                        <div class="footerSec">
+                            <target class="leg1"></target>
+                            <target class="leg2"></target>
                         </div>
                     </puzzlebox>
                 </section>

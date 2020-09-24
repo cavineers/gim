@@ -127,20 +127,48 @@ target.arm2 {
     width: 20%;
 }
 
+target.leg1 {
+    margin-top: 2.5%;
+    margin-left: auto;
+    margin-right: 5%;
+    height: 100px;
+    width: 20%;
+}
+
+target.leg2 {
+    margin-top: 2.5%;
+    margin-right: auto;
+    margin-left: 5%;
+    height: 100px;
+    width: 20%;
+}
+
 #head,
 #body,
 #arm1,
-#arm2 {
+#arm2,
+#leg1,
+#leg2 {
     background-size: 100px 100px;
 }
 
+#leg2 {
+    background-image: url('../Img/gimPieces/leg2T.png');
+    cursor: pointer;
+}
+
+#leg1 {
+    background-image: url('../Img/gimPieces/leg1T.png');
+    cursor: pointer;
+}
+
 #arm2 {
-    background-image: url('../Img/test.jpg');
+    background-image: url('../Img/gimPieces/arm2T.png');
     cursor: pointer;
 }
 
 #arm1 {
-    background-image: url('../Img/1.jpg');
+    background-image: url('../Img/gimPieces/arm1T.png');
     cursor: pointer;
 }
 
@@ -150,23 +178,41 @@ target.arm2 {
 }
 
 #body {
-    background-image: url('../Img/gimyyy.png');
+    background-image: url('../Img/gimPieces/centerPieceT.png');
     cursor: pointer;
 }
 
 target.head,
 target.arm2,
 target.arm1,
-target.body {
+target.body,
+target.leg1,
+target.leg2 {
     display: block;
     border: solid 2px rgb(0, 0, 0);
     box-sizing: border-box;
+}
+
+.noBorder {
+    border: none !important;
+    background: transparent !important;
 }
 
 target.arm2,
 target.arm1,
 target.body {
     float: left;
+}
+
+target.leg1,
+target.leg2 {
+    float: right;
+    clear: both;
+}
+
+.footerSec {
+    display: flex;
+    width: 100%;
 }
 
 puzzlebox {

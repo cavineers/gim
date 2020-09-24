@@ -146,10 +146,80 @@ document.addEventListener("click", printMousePos);
 
 // Puzzle Section
 let puzzle1Objs = 0;
+let arm1 = false;
+let arm2 = false;
+let leg1 = false;
+let leg2 = false;
+let body = false;
+let head = false;
 
 function checkIfDonePuzzle1() {
-    if (puzzle1Objs == 4) { //Update 4 with number of puzzle pieces
-        document.getElementById('completeMsg').style.display = 'block';
+    if (puzzle1Objs == 6) { //Update with number of puzzle pieces!!
+        document.getElementById('wrapper').style.background = 'lightgreen';
+        document.getElementsByClassName('arm1')[0].classList.add('noBorder');
+        document.getElementsByClassName('arm2')[0].classList.add('noBorder');
+        document.getElementsByClassName('leg1')[0].classList.add('noBorder');
+        document.getElementsByClassName('leg2')[0].classList.add('noBorder');
+        document.getElementsByClassName('head')[0].classList.add('noBorder');
+        document.getElementsByClassName('body')[0].classList.add('noBorder');
+        //Animations
+        //Arm1
+        document.getElementsByClassName('arm1')[0].style.position = 'relative'
+        document.getElementsByClassName('arm1')[0].style.zIndex = 10;
+        document.getElementsByClassName('arm1')[0].animate([{
+                transform: 'translate(0, 0)'
+            },
+            {
+                transform: 'translate(120%, 5%)',
+                height: '200px'
+            }
+        ], {
+            duration: 1000,
+            fill: 'forwards'
+        });
+        //Arm2
+        document.getElementsByClassName('arm2')[0].style.position = 'relative'
+        document.getElementsByClassName('arm2')[0].style.zIndex = 10;
+        document.getElementsByClassName('arm2')[0].animate([{
+                transform: 'translate(0, 0)'
+            },
+            {
+                transform: 'translate(-120%, 5%)',
+                height: '200px'
+            }
+        ], {
+            duration: 1000,
+            fill: 'forwards'
+        });
+        //Leg1
+        document.getElementsByClassName('leg1')[0].style.position = 'relative'
+        document.getElementsByClassName('leg1')[0].style.zIndex = 10;
+        document.getElementsByClassName('leg1')[0].animate([{
+                transform: 'translate(0, 0)'
+            },
+            {
+                transform: 'translate(-4%, -45%)',
+                height: '200px'
+            }
+        ], {
+            duration: 1000,
+            fill: 'forwards'
+        });
+        //Leg 2
+        document.getElementsByClassName('leg2')[0].style.position = 'relative'
+        document.getElementsByClassName('leg2')[0].style.zIndex = 10;
+        document.getElementsByClassName('leg2')[0].animate([{
+                transform: 'translate(0, 0)'
+            },
+            {
+                transform: 'translate(4%, -45%)',
+                height: '200px'
+            }
+        ], {
+            duration: 1000,
+            fill: 'forwards'
+        });
+        document.getElementById('completedText').style.display = 'block';
     }
 }
 
@@ -181,8 +251,11 @@ $("target.arm1").droppable({
             .css("background-repeat", "no-repeat")
             .css("background-size", "100% 100%")
             .appendTo('.arm1');
-        puzzle1Objs++;
-        checkIfDonePuzzle1();
+        if (arm1 == false) {
+            puzzle1Objs++;
+            checkIfDonePuzzle1();
+            arm1 = true;
+        }
     }
 });
 
@@ -197,8 +270,11 @@ $("target.arm2").droppable({
             .css("background-repeat", "no-repeat")
             .css("background-size", "100% 100%")
             .appendTo('.arm2');
-        puzzle1Objs++;
-        checkIfDonePuzzle1();
+        if (arm2 == false) {
+            puzzle1Objs++;
+            checkIfDonePuzzle1();
+            arm2 = true;
+        }
     }
 });
 
@@ -213,8 +289,11 @@ $("target.head").droppable({
             .css("background-repeat", "no-repeat")
             .css("background-size", "100% 100%")
             .appendTo('.head');
-        puzzle1Objs++;
-        checkIfDonePuzzle1();
+        if (head == false) {
+            puzzle1Objs++;
+            checkIfDonePuzzle1();
+            head = true;
+        }
     }
 });
 
@@ -229,7 +308,48 @@ $("target.body").droppable({
             .css("background-repeat", "no-repeat")
             .css("background-size", "100% 100%")
             .appendTo('.body');
-        puzzle1Objs++;
-        checkIfDonePuzzle1();
+        if (body == false) {
+            puzzle1Objs++;
+            checkIfDonePuzzle1();
+            body = true;
+        }
+    }
+});
+
+$("target.leg1").droppable({
+    accept: "#leg1",
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .css("width", "100%")
+            .css("height", "100%")
+            .css("background-repeat", "no-repeat")
+            .css("background-size", "100% 100%")
+            .appendTo('.leg1');
+        if (leg1 == false) {
+            puzzle1Objs++;
+            checkIfDonePuzzle1();
+            leg1 = true;
+        }
+    }
+});
+
+$("target.leg2").droppable({
+    accept: "#leg2",
+    drop: function(event, ui) {
+        ui.draggable
+            .css("left", "auto")
+            .css("top", "auto")
+            .css("width", "100%")
+            .css("height", "100%")
+            .css("background-repeat", "no-repeat")
+            .css("background-size", "100% 100%")
+            .appendTo('.leg2');
+        if (leg2 == false) {
+            puzzle1Objs++;
+            checkIfDonePuzzle1();
+            leg2 = true;
+        }
     }
 });
